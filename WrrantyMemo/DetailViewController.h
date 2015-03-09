@@ -8,10 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DetailViewController : UIViewController
+@interface DetailViewController : UIViewController<UITextViewDelegate,UITextViewDelegate>
+@property (weak, nonatomic) IBOutlet UIDatePicker *datepicker;
+@property (weak, nonatomic) IBOutlet UILabel *datelabel;
 
 @property (strong, nonatomic) id detailItem;
+
 @property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
+@property (weak, nonatomic) IBOutlet UITextField *myTextField;
+
+- (IBAction)inputText:(id)sender;
+- (IBAction)changeDate:(UIDatePicker *)sender;
+//- (IBAction)changeDate:(id)sender;
 
 @end
 
