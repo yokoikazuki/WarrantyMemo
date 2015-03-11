@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF4C106E1AAF293D00ABC896 /* memo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DF4C106D1AAF293D00ABC896 /* memo.jpg */; };
+		DF4C10701AAF2B0D00ABC896 /* timetoreminder.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DF4C106F1AAF2B0D00ABC896 /* timetoreminder.jpg */; };
+		DF4C107C1AAF51C300ABC896 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF4C107B1AAF51C300ABC896 /* CameraViewController.m */; };
 		DF97E0861AAC146D00046135 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DF97E0851AAC146D00046135 /* main.m */; };
 		DF97E0891AAC146D00046135 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DF97E0881AAC146D00046135 /* AppDelegate.m */; };
 		DF97E08C1AAC146D00046135 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF97E08B1AAC146D00046135 /* MasterViewController.m */; };
@@ -28,6 +31,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DF4C106D1AAF293D00ABC896 /* memo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = memo.jpg; sourceTree = "<group>"; };
+		DF4C106F1AAF2B0D00ABC896 /* timetoreminder.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = timetoreminder.jpg; sourceTree = "<group>"; };
+		DF4C107A1AAF51C300ABC896 /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CameraViewController.h; path = ../CameraViewController.h; sourceTree = "<group>"; };
+		DF4C107B1AAF51C300ABC896 /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CameraViewController.m; path = ../CameraViewController.m; sourceTree = "<group>"; };
 		DF97E0801AAC146D00046135 /* WrrantyMemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WrrantyMemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF97E0841AAC146D00046135 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DF97E0851AAC146D00046135 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -84,12 +91,16 @@
 		DF97E0821AAC146D00046135 /* WrrantyMemo */ = {
 			isa = PBXGroup;
 			children = (
+				DF4C106F1AAF2B0D00ABC896 /* timetoreminder.jpg */,
+				DF4C106D1AAF293D00ABC896 /* memo.jpg */,
 				DF97E0871AAC146D00046135 /* AppDelegate.h */,
 				DF97E0881AAC146D00046135 /* AppDelegate.m */,
 				DF97E08A1AAC146D00046135 /* MasterViewController.h */,
 				DF97E08B1AAC146D00046135 /* MasterViewController.m */,
 				DF97E08D1AAC146D00046135 /* DetailViewController.h */,
 				DF97E08E1AAC146D00046135 /* DetailViewController.m */,
+				DF4C107A1AAF51C300ABC896 /* CameraViewController.h */,
+				DF4C107B1AAF51C300ABC896 /* CameraViewController.m */,
 				DF97E0901AAC146D00046135 /* Main.storyboard */,
 				DF97E0931AAC146D00046135 /* Images.xcassets */,
 				DF97E0951AAC146D00046135 /* LaunchScreen.xib */,
@@ -205,6 +216,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF97E0921AAC146D00046135 /* Main.storyboard in Resources */,
+				DF4C10701AAF2B0D00ABC896 /* timetoreminder.jpg in Resources */,
+				DF4C106E1AAF293D00ABC896 /* memo.jpg in Resources */,
 				DF97E0971AAC146D00046135 /* LaunchScreen.xib in Resources */,
 				DF97E0941AAC146D00046135 /* Images.xcassets in Resources */,
 			);
@@ -224,6 +237,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF4C107C1AAF51C300ABC896 /* CameraViewController.m in Sources */,
 				DF97E0891AAC146D00046135 /* AppDelegate.m in Sources */,
 				DF97E08C1AAC146D00046135 /* MasterViewController.m in Sources */,
 				DF97E0861AAC146D00046135 /* main.m in Sources */,
@@ -418,6 +432,7 @@
 				DF97E0A81AAC146E00046135 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DF97E0A91AAC146E00046135 /* Build configuration list for PBXNativeTarget "WrrantyMemoTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +441,7 @@
 				DF97E0AB1AAC146E00046135 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

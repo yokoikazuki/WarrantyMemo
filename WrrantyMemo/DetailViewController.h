@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DetailViewController : UIViewController<UITextViewDelegate,UITextViewDelegate>
+
+
+@interface DetailViewController : UIViewController<UITextViewDelegate,UITextViewDelegate,UINavigationControllerDelegate, UIImagePickerControllerDelegate> //カメラロールから画像を取得する
 @property (weak, nonatomic) IBOutlet UIDatePicker *datepicker;
 @property (weak, nonatomic) IBOutlet UILabel *datelabel;
 

@@ -8,13 +8,22 @@
 
 #import "DetailViewController.h"
 
+
 @interface DetailViewController ()
+
 @property (strong, nonatomic) IBOutlet UITextView *contentField;
 @property (strong, nonatomic) IBOutlet UITextField *titleField;
 - (void)configureView;
 @end
 
+@interface DetailViewController () <UINavigationControllerDelegate, UIImagePickerControllerDelegate> {
+    UIImagePickerController *ipc;
+} //カメラロールから画像を取得
+
+@end
+
 @implementation DetailViewController
+
 
 #pragma mark - Managing the detail item
 
@@ -48,6 +57,14 @@
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSString *defaultStr = [defaults stringForKey:@"MY_KEY"];
     self.myTextField.text = defaultStr;
+    
+    //カメラロールから画像の取得
+    ipc = [[UIImagePickerController alloc] init];
+    ipc.delegate = self;
+    
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+        ipc.sourceType = UIImagePickerControllerSourceTypeCamera;
+    }
 }
 
 - (IBAction)inputText:(id)sender {
@@ -92,6 +109,33 @@
 }
 
 - (IBAction)date:(UIDatePicker *)sender {
+}
+
+//カメラロールから画像の取得
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    // picker から画像を取得する。
+    UIImage *fromCamera = [info objectForKey:UIImagePickerControllerOriginalImage];
+    
+    // 元の画面に画像をUIImageViewとして追加する
+    UIImageView *iv = [[UIImageView alloc] initWithImage:fromCamera];
+    [self.view addSubview:iv];
+    
+//    iv.transform = CGAffineTransformMakeScale(1.0, 1.0);
+    
+    // picker を閉じる
+    [picker dismissModalViewControllerAnimated:YES];
+}
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
+{
+    // picker を閉じる
+    [picker dismissModalViewControllerAnimated:YES];
+}
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [self presentModalViewController:ipc animated:YES];
 }
 
 
